@@ -6,6 +6,9 @@ swift_library(
     srcs = glob([
         "Sources/**/*.swift",
     ]),
+    data = glob([
+        "Sources/**/*.metal",
+    ]),
     copts = [
         "-warnings-as-errors",
     ],
@@ -20,8 +23,6 @@ swift_library(
         "//submodules/Components/BundleIconComponent",
         "//submodules/TelegramUI/Components/TextBadgeComponent",
         "//submodules/UIKitRuntimeUtils",
-        "//submodules/TelegramUI/Components/LiquidLens",
-        "//submodules/AppBundle",
     ],
     visibility = [
         "//visibility:public",
